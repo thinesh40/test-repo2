@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'linux'
+    }
+
+  }
   stages {
     stage('Hello') {
       parallel {
@@ -10,6 +15,12 @@ pipeline {
         }
 
         stage('damar') {
+          agent {
+            node {
+              label 'linux'
+            }
+
+          }
           steps {
             echo 'damar'
           }
