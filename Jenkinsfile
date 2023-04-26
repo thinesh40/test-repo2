@@ -29,6 +29,7 @@ pipeline {
           }
           steps {
             echo 'damar'
+            echo 'test'
           }
         }
 
