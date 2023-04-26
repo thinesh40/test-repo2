@@ -11,7 +11,7 @@ pipeline {
 
         stage('damar') {
           steps {
-            sh 'echo "damar"'
+            echo 'damar'
           }
         }
 
