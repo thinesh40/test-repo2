@@ -35,7 +35,7 @@ pipeline {
 
         stage('artic') {
           steps {
-            archiveArtifacts '*.txt'
+            archiveArtifacts(artifacts: '*.txt', allowEmptyArchive: true)
             sh 'dir'
           }
         }
