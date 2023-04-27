@@ -9,12 +9,7 @@ pipeline {
     stage('Hello') {
       parallel {
         stage('Hello') {
-          agent {
-            node {
-              label 'main'
-            }
-
-          }
+          agent any
           steps {
             echo 'Hello World!'
           }
