@@ -33,6 +33,13 @@ pipeline {
           }
         }
 
+        stage('artic') {
+          steps {
+            archiveArtifacts '*.txt'
+            sh 'dir'
+          }
+        }
+
       }
     }
 
