@@ -29,14 +29,20 @@ pipeline {
         }
 
         stage('artic') {
+          environment {
+            TEST = 'DAMAR'
+          }
           steps {
             archiveArtifacts(artifacts: '*.txt', allowEmptyArchive: true)
-            sh 'dir'
+            echo 'I am $TEST'
           }
         }
 
       }
     }
 
+  }
+  environment {
+    TEST = 'damar'
   }
 }
